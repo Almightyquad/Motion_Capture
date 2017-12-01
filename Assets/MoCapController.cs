@@ -18,11 +18,11 @@ public class MoCapController : MonoBehaviour {
     Transform secondPhone;
     void Start()
     {
-        theSourceFile = new FileInfo("Assets/recordedMoCapData.txt");
+        theSourceFile = new FileInfo("Assets/recordedMoCapData0.txt");
         reader = theSourceFile.OpenText();
 
         readFiles(reader, ref quaternionList, ref times);
-        theSourceFile = new FileInfo("Assets/recordedMoCapData2.txt");
+        theSourceFile = new FileInfo("Assets/recordedMoCapData1.txt");
         reader = theSourceFile.OpenText();
         readFiles(reader, ref secondquaternionList, ref secondtimes);
 
