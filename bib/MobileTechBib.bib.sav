@@ -61,4 +61,15 @@
   url    = {https://source.android.com/devices/sensors/sensor-types#rotation_vector},
 }
 
+@Article{grassia1998practical,
+  author    = {Grassia, F Sebastian},
+  title     = {Practical parameterization of rotations using the exponential map},
+  journal   = {Journal of graphics tools},
+  year      = {1998},
+  volume    = {3},
+  number    = {3},
+  pages     = {29--48},
+  publisher = {Taylor \& Francis},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
