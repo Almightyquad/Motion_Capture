@@ -107,20 +107,34 @@ public class MoCapController : MonoBehaviour {
             string[] tempStringList = new string[dataList[i].Count];
             for (int j = 0; j < dataList[i].Count; j++)
             {
+                //First CSV
+                //x,y,z,w
+                //x,y,z,w
+                //x,y,z,w
+                tempStringList[0] = tempStringList[0] + dataList[i][j][0] + "," + dataList[i][j][1] + "," + dataList[i][j][2] + "," + dataList[i][j][3] + "\n";
+                //Second CSV 
+                //x,x,x,x,x,x
+                //y,y,y,y,y,y
+                //z,z,z,z,z,z
+                //w,w,w,w,w,w
+                /*
                 tempStringList[0] = tempStringList[0] + "," + dataList[i][j][0];
                 tempStringList[1] = tempStringList[1] + "," + dataList[i][j][1];
                 tempStringList[2] = tempStringList[2] + "," + dataList[i][j][2];
                 tempStringList[3] = tempStringList[3] + "," + dataList[i][j][3];
+                */
             }
             if(File.Exists("Assets/moCapData" + i + ".txt"))
             {
                 File.Delete("Assets/moCapData" + i + ".txt");
             }
             //WHY WAS I STUCK ON THIS FOR AN HOUR?! Because the stupid Remove method does not manipulate the string in itself so it needs to be assigned back onto itself. I WANT POINTERS!
+            //Second CSV
+            /*
             tempStringList[0] = tempStringList[0].Remove(0, 1);
             tempStringList[1] = tempStringList[1].Remove(0, 1);
             tempStringList[2] = tempStringList[2].Remove(0, 1);
-            tempStringList[3] = tempStringList[3].Remove(0, 1);
+            tempStringList[3] = tempStringList[3].Remove(0, 1);*/
             File.WriteAllLines("Assets/moCapData" + i + ".txt", tempStringList);
         }
     }
